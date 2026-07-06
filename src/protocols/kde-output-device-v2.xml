@@ -619,7 +619,7 @@
     <enum name="flags">
       <description summary="mode flags"/>
       <entry name="custom" value="0x1"/>
-      <entry name="reduced_blanking" value="0x2"/>
+      <entry name="reduced_blanking" value="0x2" deprecated-since="24"/>
     </enum>
 
     <event name="flags" since="19">
