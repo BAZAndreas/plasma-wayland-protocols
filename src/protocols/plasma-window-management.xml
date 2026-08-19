@@ -6,7 +6,7 @@
     SPDX-License-Identifier: LGPL-2.1-or-later
   ]]></copyright>
 
-  <interface name="org_kde_plasma_window_management" version="20">
+  <interface name="org_kde_plasma_window_management" version="21">
     <description summary="application windows management">
       This interface manages application windows.
       It provides requests to show and hide the desktop and emits
@@ -126,7 +126,7 @@
     </request>
   </interface>
 
-  <interface name="org_kde_plasma_window" version="20">
+  <interface name="org_kde_plasma_window" version="21">
     <description summary="interface to control application windows">
       Manages and control an application window.
 
@@ -413,6 +413,14 @@
       <arg name="y" type="int" summary="y position of the org_kde_plasma_window"/>
       <arg name="width" type="uint" summary="width of the org_kde_plasma_window"/>
       <arg name="height" type="uint" summary="height of the org_kde_plasma_window"/>
+    </event>
+
+    <event name="mapped" since="21">
+      <description summary="ready for painting">
+        Specifies that the window is ready for painting. A window can be
+        mapped some time later after getting created. This event may be sent
+        before or after the initial_state event.
+      </description>
     </event>
   </interface>
 
